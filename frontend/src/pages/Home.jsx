@@ -1,29 +1,24 @@
-import NoteCard from "../components/NoteCard";
+import NotesList from "../components/NotesList";
+import FloatingAddButton from "../components/FloatingAddButton";
 
 const dummyNotes = [
     {
         title: "React Tips",
         content: "Remember to use useEffect for side effects.",
-        tags: ["React","Study"],
+        tags: ["React", "Study"],
     },
     {
         title: "Grocery List",
         content: "Eggs, Milk, Bread, Butter",
         tags: ["Personal"],
     },
-];
+    ];
 
-function Home() {
+    function Home() {
     return (
-        <div className="p-6 grid gap-4">
-        {dummyNotes.map((note,index) => (
-            <NoteCard
-            key={index}
-            title={note.title}
-            content={note.content}
-            tags={note.tags}
-            />
-        ))}
+        <div className="p-6 max-w-3xl mx-auto">
+        <NotesList notes={dummyNotes} />
+        <FloatingAddButton />
         </div>
     );
 }
