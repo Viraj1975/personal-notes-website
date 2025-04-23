@@ -33,10 +33,10 @@ router.route("/logout").post(veriftyJWT, logoutUser);
 router.route("/refresh-token").post(refreshAccessToken);
 
 // User profile operations
-router.route("/current-user").get(veriftyJWT, getCurrentUser);
-router.route("/change-password").post(veriftyJWT, changeCurrentPassword);
-router.route("/update-account").patch(veriftyJWT, updateAccountDetails);
-router.route("/avatar").patch(veriftyJWT, upload.single("avatar"), updateUserAvatar);
-router.route("/cover-image").patch(veriftyJWT, upload.single("coverImage"), updateUserCoverImage);
+router.route("/current-user").get(veriftyJWT,getCurrentUser);
+router.route("/change-password").post(veriftyJWT,changeCurrentPassword);
+router.route("/update-account").patch(veriftyJWT,updateAccountDetails);
+router.route("/avatar").patch(veriftyJWT,upload.single("avatar"),updateUserAvatar);
+router.route("/cover-image").patch(veriftyJWT,upload.single("coverImage"),updateUserCoverImage);
 
 export default router;

@@ -1,10 +1,12 @@
 import {useState} from "react";
-import WelcomeBanner from "../components/WelcomeBanner";
+
+import WelcomeBanner from '../components/WelcomeBanner';
 import SearchBar from "../components/SearchBar";
 import TagFilter from "../components/TagFilter";
 import NotesList from "../components/NotesList";
 import EmptyState from "../components/EmptyState";
-import FloatingAddButton from "../components/FloatingAddButton";
+import FloatingAddButton from "../components/FloatingAddButton"
+
 
 const dummyNotes = [
     {title: "React Tips",content: "useEffect for side effects",tags: ["React","Study"]},
